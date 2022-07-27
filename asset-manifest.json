@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/krysztaly-czasu-app/static/css/main.073c9b0a.css",
+    "main.js": "/krysztaly-czasu-app/static/js/main.32b9e9d8.js",
+    "static/js/787.07af059a.chunk.js": "/krysztaly-czasu-app/static/js/787.07af059a.chunk.js",
+    "index.html": "/krysztaly-czasu-app/index.html",
+    "main.073c9b0a.css.map": "/krysztaly-czasu-app/static/css/main.073c9b0a.css.map",
+    "main.32b9e9d8.js.map": "/krysztaly-czasu-app/static/js/main.32b9e9d8.js.map",
+    "787.07af059a.chunk.js.map": "/krysztaly-czasu-app/static/js/787.07af059a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.32b9e9d8.js"
+  ]
+}

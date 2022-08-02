@@ -1,4 +1,4 @@
-import kc_logo from "../images/kc_logo.JPG";
+import kc_logo from "../../images/kc_logo.JPG";
 
 const Header = () => {
   return (

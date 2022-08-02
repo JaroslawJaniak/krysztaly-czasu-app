@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./header.js";
 import Menu from "./menu/Menu.js";
 import CharacterSummary from "./characterSummary/CharacterSummary.js";
 import WindowInnerSize from "./windowInnerSize";
@@ -10,7 +11,9 @@ const Main = () => {
     <body>
       <main className="main" role="main">
         <Menu />
-        <div className="main__container"></div>
+        <div className="main__container">
+          <Header />
+        </div>
         <CharacterSummary />
         <WindowInnerSize />
       </main>

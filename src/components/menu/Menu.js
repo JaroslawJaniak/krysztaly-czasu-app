@@ -1,8 +1,8 @@
 import "./Menu.css";
 import "./Lists.css";
-import MenuCloseButton from "./Menu__closeButton.js";
-import MenuOpenButton from "./Menu__openButton.js";
-import MenuOrderedList from "./Menu__ordered-list.js";
+import MenuCloseButton from "./MenuCloseButton.js";
+import MenuOpenButton from "./MenuOpenButton.js";
+import MenuOrderedList from "./MenuOrderedList.js";
 
 const Menu = () => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./header.js";
+import Header from "./Header.js";
 import Menu from "../menu/Menu.js";
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
-import WindowInnerSize from "./windowInnerSize";
+import WindowInnerSize from "./WindowInnerSize";
 
-import "./main.css";
+import "./Main.css";
 
 const Main = () => {
   return (

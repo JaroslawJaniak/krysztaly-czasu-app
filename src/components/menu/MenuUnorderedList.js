@@ -65,11 +65,11 @@ const MenuUnorderedList = () => {
           </li>
         </ul>
       </li>
-      <li role="menuitem" className="menu__item">
+      <ListItem className="menu__item">
         <a id="section5" href="#chapter_section5" className="menu__link">
           V. LOSOWANIE WZROSTU I WAGI
         </a>
-      </li>
+      </ListItem>
       <ListItem className="menu__item">
         <a id="section6" href="#chapter_section6" className="menu__link">
           VI. LOSOWANIE WSPÓŁCZYNNIKÓW PODSTAWOWYCH

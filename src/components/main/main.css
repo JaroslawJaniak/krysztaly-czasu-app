@@ -152,7 +152,7 @@ p {
   padding-top: 0.75rem;
 }
 
-@media only screen and (max-width: 1343px) {
+@media only screen and (max-width: 343px) {
   @supports (display: grid) {
     .cards > ul {
       padding-inline-start: 0px;
@@ -355,7 +355,7 @@ h3.stylized {
   padding: 0.5rem;
 }
 
-@media only screen and (max-width: 1343px) {
+@media only screen and (max-width: 343px) {
   .window__InnerSize {
     border: 1px solid rgb(255, 0, 0);
     margin-top: 10px;

@@ -103,7 +103,7 @@
   transition: 500ms;
 }
 
-@media only screen and (max-width: 1343px) {
+@media only screen and (max-width: 343px) {
   .menu {
     height: auto;
   }

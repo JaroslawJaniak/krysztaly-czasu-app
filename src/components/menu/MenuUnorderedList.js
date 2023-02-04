@@ -1,17 +1,19 @@
 import ListItem from "./List_item.js";
+import MenuListItem from "./MenuListItem.js";
 
-const MenuUnorderedList = () => {
+const MenuUnorderedList = (props) => {
   return (
     <ul className="menu__unordered-list">
-      <li role="menuitem" className="menu__item">
-        <a id="section1" href="#chapter_section1" className="menu__link">
-          I. WYBÓR RASY I PŁCI
-        </a>
-      </li>
-      <li role="menuitem" className="menu__item">
-        <a id="section2" href="#chapter_section2" className="menu__link">
-          II. LOSOWANIE POCHODZENIA
-        </a>
+      <MenuListItem
+        sectionId={props.sections[0].id}
+        sectionTitle={props.sections[0].title}
+        sectionHref={props.sections[0].anchor}
+      />
+      <MenuListItem
+        sectionId={props.sections[1].id}
+        sectionTitle={props.sections[1].title}
+        sectionHref={props.sections[1].anchor}
+      >
         <ul id="ul_section2" className="menu__unordered-list sublist">
           <li role="menuitem" className="menu__item">
             <a href="#chapter_section2__place_of_birth" className="menu__link">
@@ -27,16 +29,18 @@ const MenuUnorderedList = () => {
             </a>
           </li>
         </ul>
-      </li>
-      <li role="menuitem" className="menu__item">
-        <a id="section3" href="#chapter_section3" className="menu__link">
-          III. LOSOWANIE UŁOMNOŚCI I ZDLONOŚCI NADNATURALNYCH
-        </a>
-      </li>
-      <li role="menuitem" className="menu__item">
-        <a id="section4" href="#chapter_section4" className="menu__link">
-          IV. WYBÓR PROFESJI
-        </a>
+      </MenuListItem>
+
+      <MenuListItem
+        sectionId={props.sections[2].id}
+        sectionTitle={props.sections[2].title}
+        sectionHref={props.sections[2].anchor}
+      />
+      <MenuListItem
+        sectionId={props.sections[3].id}
+        sectionTitle={props.sections[3].title}
+        sectionHref={props.sections[3].anchor}
+      >
         <ul id="ul_section4" className="menu__unordered-list sublist">
           <li role="menuitem" className="menu__item">
             <a href="#profession_cast1" className="menu__link">
@@ -64,17 +68,17 @@ const MenuUnorderedList = () => {
             </a>
           </li>
         </ul>
-      </li>
-      <ListItem className="menu__item">
-        <a id="section5" href="#chapter_section5" className="menu__link">
-          V. LOSOWANIE WZROSTU I WAGI
-        </a>
-      </ListItem>
-      <ListItem className="menu__item">
-        <a id="section6" href="#chapter_section6" className="menu__link">
-          VI. LOSOWANIE WSPÓŁCZYNNIKÓW PODSTAWOWYCH
-        </a>
-      </ListItem>
+      </MenuListItem>
+      <MenuListItem
+        sectionId={props.sections[4].id}
+        sectionTitle={props.sections[4].title}
+        sectionHref={props.sections[4].anchor}
+      />
+      <MenuListItem
+        sectionId={props.sections[5].id}
+        sectionTitle={props.sections[5].title}
+        sectionHref={props.sections[5].anchor}
+      />
     </ul>
   );
 };

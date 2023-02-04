@@ -1,15 +1,19 @@
 import "./CharacterSummary.css";
 import "../menu/Lists.css";
+import CharacterSummaryListItem from "./CharacterSummaryListItem";
 
-const CharacterSummary = () => {
+const CharacterSummary = (props) => {
   return (
     <div class="character__summary">
       <ol class="character__summary_list ordered-list">
         <li class="character__summary__item">
           <span class="character__summary_name">(Imię Postaci)</span>
           <ul class="unordered-list">
-            <li class="menu__item" id="character__summary_chapter_section1">
-              I. WYBÓR RASY I PŁCI
+            <CharacterSummaryListItem
+              chapterId={props.chapters_info[0].id}
+              chapterTitle={props.chapters_info[0].title}
+              id={props.chapters_info[0].id}
+            >
               <ul class="menu__unordered-list">
                 <li class="menu__item character__summary__item1">
                   Płeć: <span id="character__summary_gender"> —</span>
@@ -18,9 +22,12 @@ const CharacterSummary = () => {
                   Rasa: <span id="character__summary_race"> —</span>
                 </li>
               </ul>
-            </li>
-            <li class="menu__item" id="character__summary_chapter_section2">
-              II. LOSOWANIE POCHODZENIA
+            </CharacterSummaryListItem>
+            <CharacterSummaryListItem
+              chapterId={props.chapters_info[1].id}
+              chapterTitle={props.chapters_info[1].title}
+              id={props.chapters_info[1].id}
+            >
               <ul class="unordered-list">
                 <li class="menu__item character__summary__item1">
                   Miejsce urodzenia:{" "}
@@ -35,9 +42,13 @@ const CharacterSummary = () => {
                   <span id="character__summary_social_benefice">0</span> złt
                 </li>
               </ul>
-            </li>
-            <li class="menu__item" id="character__summary_chapter_section3">
-              III. LOSOWANIE UŁOMNOŚCI I ZDOLNOŚCI NADNATURALNYCH
+            </CharacterSummaryListItem>
+
+            <CharacterSummaryListItem
+              chapterId={props.chapters_info[2].id}
+              chapterTitle={props.chapters_info[2].title}
+              id={props.chapters_info[2].id}
+            >
               <ul class="menu__unordered-list">
                 <li class="menu__item character__summary__item1">
                   Ułomność: <span id="character__summary_disability1"> —</span>
@@ -47,18 +58,25 @@ const CharacterSummary = () => {
                   <span id="character__summary_abieliety1"> —</span>
                 </li>
               </ul>
-            </li>
-            <li class="menu__item" id="character__summary_chapter_section4">
-              IV. WYBÓR PROFESJI
+            </CharacterSummaryListItem>
+            <CharacterSummaryListItem
+              chapterId={props.chapters_info[3].id}
+              chapterTitle={props.chapters_info[3].title}
+              id={props.chapters_info[3].id}
+            >
               <ul class="menu__unordered-list">
                 <li class="menu__item character__summary__item1">
                   Profesja: <span id="character__summary_profession1"> —</span>
                   <span id="character__summary_profession2"></span>
                 </li>
               </ul>
-            </li>
-            <li class="menu__item" id="character__summary_chapter_section5">
-              V. LOSOWANIE WZROSTU I WAGI
+            </CharacterSummaryListItem>
+
+            <CharacterSummaryListItem
+              chapterId={props.chapters_info[4].id}
+              chapterTitle={props.chapters_info[4].title}
+              id={props.chapters_info[4].id}
+            >
               <ul class="menu__unordered-list">
                 <li class="menu__item character__summary__item1">
                   Wzrost: <span id="character__summary_height"> —</span>
@@ -67,9 +85,13 @@ const CharacterSummary = () => {
                   Waga: <span id="character__summary_weight"> —</span>
                 </li>
               </ul>
-            </li>
-            <li class="menu__item" id="character__summary_chapter_section6">
-              VI. LOSOWANIE WSPÓŁCZYNNIKÓW PODSTAWOWYCH
+            </CharacterSummaryListItem>
+
+            <CharacterSummaryListItem
+              chapterId={props.chapters_info[5].id}
+              chapterTitle={props.chapters_info[5].title}
+              id={props.chapters_info[5].id}
+            >
               <ul class="menu__unordered-list">
                 <li class="menu__item character__summary__item1">
                   ŻYW: <span id="character__summary_"> —</span>
@@ -108,10 +130,7 @@ const CharacterSummary = () => {
                   O/W: <span id="character__summary_"> —</span>
                 </li>
               </ul>
-            </li>
-            <li class="character__summary__item"></li>
-            <li class="character__summary__item"></li>
-            <li role="menuitem" class="menu__item"></li>
+            </CharacterSummaryListItem>
           </ul>
         </li>
       </ol>

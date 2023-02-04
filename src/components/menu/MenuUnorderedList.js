@@ -5,14 +5,14 @@ const MenuUnorderedList = (props) => {
   return (
     <ul className="menu__unordered-list">
       <MenuListItem
-        sectionId={props.sections[0].id}
-        sectionTitle={props.sections[0].title}
-        sectionHref={props.sections[0].anchor}
+        chapterId={props.chapters_info[0].id}
+        chapterTitle={props.chapters_info[0].title}
+        chapterHref={props.chapters_info[0].anchor}
       />
       <MenuListItem
-        sectionId={props.sections[1].id}
-        sectionTitle={props.sections[1].title}
-        sectionHref={props.sections[1].anchor}
+        chapterId={props.chapters_info[1].id}
+        chapterTitle={props.chapters_info[1].title}
+        chapterHref={props.chapters_info[1].anchor}
       >
         <ul id="ul_section2" className="menu__unordered-list sublist">
           <li role="menuitem" className="menu__item">
@@ -30,16 +30,15 @@ const MenuUnorderedList = (props) => {
           </li>
         </ul>
       </MenuListItem>
-
       <MenuListItem
-        sectionId={props.sections[2].id}
-        sectionTitle={props.sections[2].title}
-        sectionHref={props.sections[2].anchor}
+        chapterId={props.chapters_info[2].id}
+        chapterTitle={props.chapters_info[2].title}
+        chapterHref={props.chapters_info[2].anchor}
       />
       <MenuListItem
-        sectionId={props.sections[3].id}
-        sectionTitle={props.sections[3].title}
-        sectionHref={props.sections[3].anchor}
+        chapterId={props.chapters_info[3].id}
+        chapterTitle={props.chapters_info[3].title}
+        chapterHref={props.chapters_info[3].anchor}
       >
         <ul id="ul_section4" className="menu__unordered-list sublist">
           <li role="menuitem" className="menu__item">
@@ -70,14 +69,14 @@ const MenuUnorderedList = (props) => {
         </ul>
       </MenuListItem>
       <MenuListItem
-        sectionId={props.sections[4].id}
-        sectionTitle={props.sections[4].title}
-        sectionHref={props.sections[4].anchor}
+        chapterId={props.chapters_info[4].id}
+        chapterTitle={props.chapters_info[4].title}
+        chapterHref={props.chapters_info[4].anchor}
       />
       <MenuListItem
-        sectionId={props.sections[5].id}
-        sectionTitle={props.sections[5].title}
-        sectionHref={props.sections[5].anchor}
+        chapterId={props.chapters_info[5].id}
+        chapterTitle={props.chapters_info[5].title}
+        chapterHref={props.chapters_info[5].anchor}
       />
     </ul>
   );

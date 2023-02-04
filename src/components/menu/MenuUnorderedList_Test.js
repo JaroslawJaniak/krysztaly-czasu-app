@@ -1,11 +1,6 @@
-import ListItem from "./List_item.js";
 import MenuListItem from "./MenuListItem.js";
 
 const MenuUnorderedList_Test = (props) => {
-  console.log("1s. " + props.sections[0].id);
-  console.log("2s. " + props.sections[0].title);
-  console.log("3s. " + props.sections[0].anchor);
-
   return (
     <ul className="menu__unordered-list">
       <li role="menuitem" className="menu__item">
@@ -14,10 +9,10 @@ const MenuUnorderedList_Test = (props) => {
         </a>
       </li>
       <MenuListItem
-        sectionId={"props.sections.id"}
-        sectionTitle={"props.sections.title"}
-        sectionHref={"props.sections.href"}
-        sectionTitle_test={props.sections[0].title}
+        chapterId={"props.chapters_info.id"}
+        chapterTitle={"props.chapters_info.title"}
+        chapterHref={"props.chapters_info.href"}
+        chapterTitle_test={props.chapters_info[1].title}
       />
     </ul>
   );

@@ -1,5 +1,6 @@
 import ListItem from "./List_item.js";
 import MenuListItem from "./MenuListItem.js";
+import MenuUnorderedSublist from "./MenuUnorderedSublist.js";
 
 const MenuUnorderedList = (props) => {
   return (
@@ -14,21 +15,10 @@ const MenuUnorderedList = (props) => {
         chapterTitle={props.chapters_info[1].title}
         chapterHref={props.chapters_info[1].anchor}
       >
-        <ul id="ul_section2" className="menu__unordered-list sublist">
-          <li role="menuitem" className="menu__item">
-            <a href="#chapter_section2__place_of_birth" className="menu__link">
-              Losowanie miejsca urodzenia
-            </a>
-          </li>
-          <li role="menuitem" className="menu__item">
-            <a
-              href="#chapter_section2__social_className"
-              className="menu__link"
-            >
-              Losowanie pochodzenia społecznego
-            </a>
-          </li>
-        </ul>
+        <MenuUnorderedSublist
+          subchaptersInfo={props.chapters_info[1].subchaptersInfo}
+          subchaptersLength={props.chapters_info[1].subchaptersInfo.length}
+        />
       </MenuListItem>
       <MenuListItem
         chapterId={props.chapters_info[2].id}
@@ -40,33 +30,10 @@ const MenuUnorderedList = (props) => {
         chapterTitle={props.chapters_info[3].title}
         chapterHref={props.chapters_info[3].anchor}
       >
-        <ul id="ul_section4" className="menu__unordered-list sublist">
-          <li role="menuitem" className="menu__item">
-            <a href="#profession_cast1" className="menu__link">
-              Kasta żołnierska
-            </a>
-          </li>
-          <li role="menuitem" className="menu__item">
-            <a href="#profession_cast2" className="menu__link">
-              Kasta rycerska
-            </a>
-          </li>
-          <li role="menuitem" className="menu__item">
-            <a href="#profession_cast3" className="menu__link">
-              Kasta złodziejska
-            </a>
-          </li>
-          <li role="menuitem" className="menu__item">
-            <a href="#profession_cast4" className="menu__link">
-              Kasta kleryczna
-            </a>
-          </li>
-          <li role="menuitem" className="menu__item">
-            <a href="#profession_cast5" className="menu__link">
-              Kasta czarodziejska
-            </a>
-          </li>
-        </ul>
+        <MenuUnorderedSublist
+          subchaptersInfo={props.chapters_info[3].subchaptersInfo}
+          subchaptersLength={props.chapters_info[3].subchaptersInfo.length}
+        />
       </MenuListItem>
       <MenuListItem
         chapterId={props.chapters_info[4].id}

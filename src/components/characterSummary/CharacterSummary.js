@@ -1,6 +1,7 @@
 import "./CharacterSummary.css";
 import "../menu/Lists.css";
 import CharacterSummaryListItem from "./CharacterSummaryListItem";
+import CharacterSummarySublist from "./CharacterSummarySublist";
 
 const CharacterSummary = (props) => {
   return (
@@ -9,128 +10,17 @@ const CharacterSummary = (props) => {
         <li class="character__summary__item">
           <span class="character__summary_name">(Imię Postaci)</span>
           <ul class="unordered-list">
-            <CharacterSummaryListItem
-              chapterId={props.chapters_info[0].id}
-              chapterTitle={props.chapters_info[0].title}
-              id={props.chapters_info[0].id}
-            >
-              <ul class="menu__unordered-list">
-                <li class="menu__item character__summary__item1">
-                  Płeć: <span id="character__summary_gender"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  Rasa: <span id="character__summary_race"> —</span>
-                </li>
-              </ul>
-            </CharacterSummaryListItem>
-            <CharacterSummaryListItem
-              chapterId={props.chapters_info[1].id}
-              chapterTitle={props.chapters_info[1].title}
-              id={props.chapters_info[1].id}
-            >
-              <ul class="unordered-list">
-                <li class="menu__item character__summary__item1">
-                  Miejsce urodzenia:{" "}
-                  <span id="character__summary_birth"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  Wyjściowa klasa społeczna:{" "}
-                  <span id="character__summary_social"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  Roczny dochód:{" "}
-                  <span id="character__summary_social_benefice">0</span> złt
-                </li>
-              </ul>
-            </CharacterSummaryListItem>
-
-            <CharacterSummaryListItem
-              chapterId={props.chapters_info[2].id}
-              chapterTitle={props.chapters_info[2].title}
-              id={props.chapters_info[2].id}
-            >
-              <ul class="menu__unordered-list">
-                <li class="menu__item character__summary__item1">
-                  Ułomność: <span id="character__summary_disability1"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  Zdolność nadnaturalna:{" "}
-                  <span id="character__summary_abieliety1"> —</span>
-                </li>
-              </ul>
-            </CharacterSummaryListItem>
-            <CharacterSummaryListItem
-              chapterId={props.chapters_info[3].id}
-              chapterTitle={props.chapters_info[3].title}
-              id={props.chapters_info[3].id}
-            >
-              <ul class="menu__unordered-list">
-                <li class="menu__item character__summary__item1">
-                  Profesja: <span id="character__summary_profession1"> —</span>
-                  <span id="character__summary_profession2"></span>
-                </li>
-              </ul>
-            </CharacterSummaryListItem>
-
-            <CharacterSummaryListItem
-              chapterId={props.chapters_info[4].id}
-              chapterTitle={props.chapters_info[4].title}
-              id={props.chapters_info[4].id}
-            >
-              <ul class="menu__unordered-list">
-                <li class="menu__item character__summary__item1">
-                  Wzrost: <span id="character__summary_height"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  Waga: <span id="character__summary_weight"> —</span>
-                </li>
-              </ul>
-            </CharacterSummaryListItem>
-
-            <CharacterSummaryListItem
-              chapterId={props.chapters_info[5].id}
-              chapterTitle={props.chapters_info[5].title}
-              id={props.chapters_info[5].id}
-            >
-              <ul class="menu__unordered-list">
-                <li class="menu__item character__summary__item1">
-                  ŻYW: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  SF: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  ZR: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  SZ: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  INT: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  MD: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  UM: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  CH: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  PR: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  WI: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  ZW: <span id="character__summary_"> —</span>
-                </li>
-                <li class="menu__item character__summary__item1">
-                  O/W: <span id="character__summary_"> —</span>
-                </li>
-              </ul>
-            </CharacterSummaryListItem>
+            {props.chapters_info.map((chapters) => (
+              <CharacterSummaryListItem
+                key={chapters.id}
+                chapterId={chapters.id}
+                chapterTitle={chapters.title}
+              >
+                <CharacterSummarySublist
+                  summaryInfo={chapters.summaryContent}
+                ></CharacterSummarySublist>
+              </CharacterSummaryListItem>
+            ))}
           </ul>
         </li>
       </ol>

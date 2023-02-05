@@ -1,5 +1,4 @@
 import MenuUnorderedList from "./MenuUnorderedList.js";
-import MenuUnorderedList_Test from "./MenuUnorderedList_Test.js";
 
 const MenuOrderedList = (props) => {
   return (
@@ -7,7 +6,6 @@ const MenuOrderedList = (props) => {
       <MenuUnorderedList
         chapters_info={props.chapters_info}
       ></MenuUnorderedList>
-      <MenuUnorderedList_Test chapters_info={props.chapters_info} />
     </ol>
   );
 };

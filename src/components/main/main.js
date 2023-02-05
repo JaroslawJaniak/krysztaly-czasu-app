@@ -33,6 +33,7 @@ const Main = () => {
       id: "s3",
       title: "III. LOSOWANIE UŁOMNOŚCI I ZDLONOŚCI NADNATURALNYCH",
       anchor: "#chapter_section3",
+      subchaptersInfo: [],
     },
     {
       id: "s4",
@@ -74,6 +75,7 @@ const Main = () => {
       subchaptersInfo: [],
     },
   ];
+
   return (
     <body>
       <main className="main" role="main">

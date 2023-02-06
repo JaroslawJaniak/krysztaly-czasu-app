@@ -1,4 +1,6 @@
 const CharacterSummarySublistItem = (props) => {
+  console.log(props.summaryInfo);
+
   return (
     <div>
       <li class="menu__item character__summary__item">

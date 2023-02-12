@@ -7,7 +7,10 @@ import ChapterContent_II from "./sections/chapters/ChapterContent_II.js";
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
 import WindowInnerSize from "./WindowInnerSize";
 
+import Test from "./test.js";
+
 import "./Main.css";
+import "./kc_styles.css";
 
 const Main = () => {
   const CHAPTERS_INFO = [

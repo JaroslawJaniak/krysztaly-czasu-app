@@ -1,7 +1,9 @@
 import React from "react";
 import Header from "./Header.js";
 import Menu from "../menu/Menu.js";
-import Sections from "../sections/Sections.js";
+import Sections from "./sections/Sections.js";
+import ChapterContent_I from "./sections/chapters/ChapterContent_I.js";
+import ChapterContent_II from "./sections/chapters/ChapterContent_II.js";
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
 import WindowInnerSize from "./WindowInnerSize";
 
@@ -15,6 +17,7 @@ const Main = () => {
       anchor: "#s1",
       subchaptersInfo: [],
       summaryContent: ["Płeć: ", "Rasa: "],
+      chapterContent: <ChapterContent_I />,
     },
     {
       id: "s2",
@@ -35,6 +38,7 @@ const Main = () => {
         "Wyjściowa klasa społeczna: ",
         "Roczny dochód (złt): ",
       ],
+      chapterContent: <ChapterContent_II />,
     },
     {
       id: "s3",
@@ -42,6 +46,7 @@ const Main = () => {
       anchor: "#s3",
       subchaptersInfo: [],
       summaryContent: ["Ułomności: ", "Zdolności nadnaturalne: "],
+      chapterContent: <ChapterContent_I />,
     },
     {
       id: "s4",
@@ -70,6 +75,7 @@ const Main = () => {
         },
       ],
       summaryContent: ["Profesja: "],
+      chapterContent: <ChapterContent_I />,
     },
     {
       id: "s5",
@@ -77,6 +83,7 @@ const Main = () => {
       anchor: "#s5",
       subchaptersInfo: [],
       summaryContent: ["Wzrost: ", "Waga: "],
+      chapterContent: <ChapterContent_I />,
     },
     {
       id: "s6",
@@ -118,6 +125,7 @@ const Main = () => {
         "ZW: ",
         "O/W: ",
       ],
+      chapterContent: <ChapterContent_I />,
     },
   ];
 

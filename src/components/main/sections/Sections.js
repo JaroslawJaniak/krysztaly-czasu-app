@@ -6,7 +6,7 @@ const Sections = (props) => {
       {props.chapters_info.map((chapter) => (
         <section id={chapter.id} className="">
           <h3 className="stylized">{chapter.title}</h3>
-          <div className="content">Content</div>
+          <div className="content">{chapter.chapterContent}</div>
         </section>
       ))}
     </div>

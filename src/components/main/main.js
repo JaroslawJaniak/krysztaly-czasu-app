@@ -4,6 +4,7 @@ import Menu from "../menu/Menu.js";
 import Sections from "./sections/Sections.js";
 import ChapterContent_I from "./sections/chapters/ChapterContent_I.js";
 import ChapterContent_II from "./sections/chapters/ChapterContent_II.js";
+import ChapterContent_III from "./sections/chapters/ChapterContent_III.js";
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
 import WindowInnerSize from "./WindowInnerSize";
 
@@ -11,6 +12,9 @@ import Test from "./test.js";
 
 import "./Main.css";
 import "./kc_styles.css";
+import "./kc_professions.css";
+import "./kc_checkbox.css";
+import "./styles.css";
 
 const Main = () => {
   const CHAPTERS_INFO = [
@@ -49,7 +53,7 @@ const Main = () => {
       anchor: "#s3",
       subchaptersInfo: [],
       summaryContent: ["Ułomności: ", "Zdolności nadnaturalne: "],
-      chapterContent: <ChapterContent_I />,
+      chapterContent: <ChapterContent_III />,
     },
     {
       id: "s4",

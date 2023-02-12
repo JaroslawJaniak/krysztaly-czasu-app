@@ -6,7 +6,7 @@ const Chapter_I_test = () => {
       id: "male",
       type: "radio",
       title: "Mężczyzna",
-      className: "checkbox__gender",
+      classname: "checkbox__gender",
     },
     {
       id: "female",
@@ -45,7 +45,7 @@ const Chapter_I_test = () => {
       classname: "race3 checkbox_containerr",
       text: [
         "- 10 pkt. do biegłości w mieczach i łukach (z wyjątkiem refleksyjnych) oraz 5 pkt. we włóczniach i sztyletach;",
-        "- infrawizja (zdolność widzenia w naturalnych ciemnościach) o zasięgu równym 1/10 SZ (metrów);",
+        "- infrawizja o zasięgu równym /10 SZ;",
         "- dwukrotnie większy niż wynikający ze współczynników zasięg słuchu i wzroku;",
         "- samouzdrowienie 1 pkt. obrażeń po 8 godzinach wypoczynku;",
       ],
@@ -121,19 +121,10 @@ const Chapter_I_test = () => {
     },
   ];
 
-  let text1 = chapterRaceDescription[0].text;
-  console.log("text1: " + text1);
-
-  let text2 = chapterRaceDescription.map((chapter) =>
-    chapter.text.map((chapter1) => chapter1)
-  );
-
-  console.log("text2: " + text2);
-
   return (
     <div>
-      {chapterGenderInfo.map((chapterGenderInfo) => (
-        <form>
+      <form>
+        {chapterGenderInfo.map((chapterGenderInfo) => (
           <div
             id={chapterGenderInfo.id}
             className={chapterGenderInfo.classname}
@@ -143,17 +134,16 @@ const Chapter_I_test = () => {
               id={chapterGenderInfo.id}
               name={chapterGenderInfo.title}
               value={chapterGenderInfo.title}
-              className={chapterGenderInfo.classname}
+              className={chapterGenderInfo.classname + "Input"}
             />
             <label for={chapterGenderInfo.title}>
               {chapterGenderInfo.title}
             </label>
           </div>
-        </form>
-      ))}
-
-      {chapterRaceDescription.map((chapterRaceDescription) => (
-        <form>
+        ))}
+      </form>
+      <form>
+        {chapterRaceDescription.map((chapterRaceDescription) => (
           <div
             id={chapterRaceDescription.id}
             className={chapterRaceDescription.classname}
@@ -173,8 +163,8 @@ const Chapter_I_test = () => {
               <p>{chapterText}</p>
             ))}
           </div>
-        </form>
-      ))}
+        ))}
+      </form>
     </div>
   );
 };

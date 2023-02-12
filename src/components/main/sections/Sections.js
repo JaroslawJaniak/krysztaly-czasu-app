@@ -1,10 +1,9 @@
 const Sections = (props) => {
-  console.log(props.chapters_info.title);
-
   return (
     <div>
       {props.chapters_info.map((chapter) => (
         <section id={chapter.id} className="">
+          <br />
           <h3 className="stylized">{chapter.title}</h3>
           <div className="content">{chapter.chapterContent}</div>
         </section>

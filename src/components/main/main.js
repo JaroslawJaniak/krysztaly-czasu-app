@@ -5,6 +5,7 @@ import Sections from "./sections/Sections.js";
 import ChapterContent_I from "./sections/chapters/ChapterContent_I.js";
 import ChapterContent_II from "./sections/chapters/ChapterContent_II.js";
 import ChapterContent_III from "./sections/chapters/ChapterContent_III.js";
+import ChapterContent_IV from "./sections/chapters/ChapterContent_IV.js";
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
 import WindowInnerSize from "./WindowInnerSize";
 
@@ -82,7 +83,7 @@ const Main = () => {
         },
       ],
       summaryContent: ["Profesja: "],
-      chapterContent: <ChapterContent_I />,
+      chapterContent: <ChapterContent_IV />,
     },
     {
       id: "s5",

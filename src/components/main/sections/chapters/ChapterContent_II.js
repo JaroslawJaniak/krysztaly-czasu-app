@@ -1,5 +1,5 @@
-import ChapterContent_II_placeOfBirth from "./ChapterContent_II_placeOfBirth";
-import ChapterContent_II_socialClass from "./ChapterContent_II_socialClass";
+import ChapterContent_II_placeOfBirth from "./chaper_II_components/ChapterContent_II_placeOfBirth";
+import ChapterContent_II_socialClass from "./chaper_II_components/ChapterContent_II_socialClass";
 
 const ChapterContent_II = () => {
   return (

@@ -1,4 +1,4 @@
-import mapImage from "../../../../images/map0.jpg";
+import mapImage from "../../../../../images/map0.jpg";
 
 const ChapterContent_II_placeOfBirth = (props) => {
   const chapterInfo = {

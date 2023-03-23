@@ -1,4 +1,6 @@
 import Subprofession from "./chapter_IV_components/Subprofession";
+import CastSubprofession_container from "./chapter_IV_components/CastSubprofession_container";
+
 const ChapterContent_IV = () => {
   const chapterInfo = [
     {
@@ -264,9 +266,9 @@ const ChapterContent_IV = () => {
             <div>
               <h4> KASTA {casts1.castName}</h4>
               <br />
-              {casts1.professions.map((prof, index) => (
+              {casts1.professions.map((prof, indexProf) => (
                 <div
-                  id={"div_profession" + index}
+                  id={"div_profession" + indexProf}
                   className="subprofession_container checkbox_container"
                 >
                   <div>
@@ -278,15 +280,20 @@ const ChapterContent_IV = () => {
                       className="checkbox__profession"
                     />
                     <label for={prof.profName}>
-                      <b>{prof.profName + " " + index}</b>
+                      <b>{prof.profName}</b>
                     </label>
                   </div>
 
                   {prof.subbProfHiddenStatus.map(
                     (subbProfHiddenStat, indexHiddenStat) => (
-                      <div hidden={casts1.castHiddenStatus[indexHiddenStat]}>
-                        {subbProfHiddenStat.map((stat) => stat.toString())}
-                      </div>
+                      <CastSubprofession_container
+                        hidden={false}
+                        index1={indexHiddenStat}
+                        Item1={subbProfHiddenStat}
+                        Item2={allProfessions}
+                      >
+                        {indexHiddenStat}
+                      </CastSubprofession_container>
                     )
                   )}
                 </div>

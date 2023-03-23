@@ -1,6 +1,6 @@
 const Subprofession = (props) => {
   return (
-    <div className="subprofession">
+    <div className="subprofession" hidden={props.hiddenStat}>
       <input
         type="checkbox"
         id="subprofession.."
@@ -8,7 +8,7 @@ const Subprofession = (props) => {
         value="SubProfName"
         className="checkbox__subprofession"
       />
-      <label for="subprofession1">{props.profession}</label>
+      <label for="subprofession1">{props.children}</label>
     </div>
   );
 };

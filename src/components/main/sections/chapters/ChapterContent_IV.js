@@ -2,16 +2,10 @@ import Subprofession from "./chapter_IV_components/Subprofession";
 import CastSubprofession_container from "./chapter_IV_components/CastSubprofession_container";
 
 const ChapterContent_IV = () => {
-  const chapterInfo = [
-    {
-      id: "tmpl1",
-      castName: "Żołnierska",
-      text1: "Czy postać ma ułomność (20% szansa)->",
-      text2: "k100",
-      text3: "ułomność:",
-      text4: "brak",
-    },
-  ];
+  const chapterInfo = {
+    text1: "Dwie profesje",
+    text2: "* - w wyjątkowych/uzasadnionych okolicznościach, za zgodą MG",
+  };
 
   const allProfessions = [
     ["WOJOWNIK", "ŁOWCA", "GWARDZISTA", "BARBARZYŃCA"],
@@ -242,7 +236,7 @@ const ChapterContent_IV = () => {
 
   return (
     <div>
-      <div class="multiple_class">
+      <div className="multiple_class">
         <input
           type="checkbox"
           id="secondClassCheckbox"
@@ -250,10 +244,17 @@ const ChapterContent_IV = () => {
           value="Dwuklasowiec"
           className="checkbox__class"
         />
-        <label for="secondClassCheckbox">Dwie profesje</label>
-        <small>
-          (* - w wyjątkowych/uzasadnionych okolicznościach, za zgodą MG)
-        </small>
+        <label for="secondClassCheckbox">{chapterInfo.text1}</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          id="secondClassCheckbox"
+          name="secondClassCheckbox"
+          value="Dwuklasowiec"
+          className="checkbox__class"
+        />
+        <label for="secondClassCheckbox">{chapterInfo.text2}</label>
       </div>
 
       <h4></h4>
@@ -287,6 +288,8 @@ const ChapterContent_IV = () => {
                   {prof.subbProfHiddenStatus.map(
                     (subbProfHiddenStat, indexHiddenStat) => (
                       <CastSubprofession_container
+                        key={prof.profName + casts1.id + indexHiddenStat}
+                        id={prof.profName + casts1.id + indexHiddenStat}
                         hidden={false}
                         index1={indexHiddenStat}
                         Item1={subbProfHiddenStat}

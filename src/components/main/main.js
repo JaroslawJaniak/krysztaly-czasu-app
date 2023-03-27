@@ -6,6 +6,7 @@ import ChapterContent_I from "./sections/chapters/ChapterContent_I.js";
 import ChapterContent_II from "./sections/chapters/ChapterContent_II.js";
 import ChapterContent_III from "./sections/chapters/ChapterContent_III.js";
 import ChapterContent_IV from "./sections/chapters/ChapterContent_IV.js";
+import ChapterContent_V from "./sections/chapters/ChapterContent_V.js";
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
 import WindowInnerSize from "./WindowInnerSize";
 
@@ -91,7 +92,7 @@ const Main = () => {
       anchor: "#s5",
       subchaptersInfo: [],
       summaryContent: ["Wzrost: ", "Waga: "],
-      chapterContent: <ChapterContent_I />,
+      chapterContent: <ChapterContent_V />,
     },
     {
       id: "s6",

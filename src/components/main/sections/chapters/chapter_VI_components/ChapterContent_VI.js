@@ -15,7 +15,7 @@ const ChapterContent_VI = () => {
         {chp6_table_base_stats2.map((baseStats) => (
           <tr id="table_base-stats_tr_race1_male" class="table_base-stats_tr">
             <td class="table_base-stats_race">{baseStats.race}</td>
-            <td>{baseStats.gender}</td>
+            <td>{baseStats.sex}</td>
             <td>{baseStats.ŻYW}</td>
             <td>{baseStats.SF}</td>
             <td>{baseStats.ZR}</td>

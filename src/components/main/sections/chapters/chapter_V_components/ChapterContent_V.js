@@ -11,14 +11,14 @@ const ChapterContent_V = (props) => {
     <div>
       <h3>{chp5_info.text1}</h3>
       <ChapterContent_V_table1 />
+      <ChapterContent_V_table2a item={chp5_table2} />
+      <ChapterContent_V_table2b item={chp5_table2} />
       <div>
         <p id="warning1">{chp5_info.text2}</p>
         <div>
           <button id="goToRaceGender_button">{chp5_info.text3}</button>
         </div>
       </div>
-      <ChapterContent_V_table2a item={chp5_table2} />
-      <ChapterContent_V_table2b item={chp5_table2} />
       <ChapterContent_V_k100 />
     </div>
   );

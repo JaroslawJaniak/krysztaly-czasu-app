@@ -1,5 +1,5 @@
-const chp5_table2_row1 = {
-  tableTitle: "V.a Tabela WZROST, WAGA I WIEK, mężczyzna",
+const chp5_table2b_rw1 = {
+  tableTitle: "V.b Tabela WZROST, WAGA I WIEK, kobieta",
   text1: "RASA",
   text2: "WZROST",
   text3: "WAGA",
@@ -10,4 +10,4 @@ const chp5_table2_row1 = {
   text8: "-",
 };
 
-export default chp5_table2_row1;
+export default chp5_table2b_rw1;

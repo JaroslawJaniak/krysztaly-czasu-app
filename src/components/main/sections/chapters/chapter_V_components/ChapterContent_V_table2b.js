@@ -1,16 +1,6 @@
-const ChapterContent_V_table2b = (props) => {
-  const tableInfo = {
-    tableTitle: "V.a Tabela WZROST, WAGA I WIEK, kobieta",
-    text1: "RASA",
-    text2: "WZROST",
-    text3: "WAGA",
-    text4: "WIEK DOJRZAŁOŚCI",
-    text5: "min.",
-    text6: "średni",
-    text7: "max.",
-    text8: "-",
-  };
+import chp5_table2b_rw1 from "./chp5_table2b_rw1";
 
+const ChapterContent_V_table2b = (props) => {
   const defaultView = props.item.map((tableContent, index) => (
     <tr key={tableContent.id + index} className="tr_height_weight">
       <td>{tableContent.race}</td>
@@ -43,7 +33,7 @@ const ChapterContent_V_table2b = (props) => {
 
   return (
     <div>
-      <p id="paragraph_height_weight_female">{tableInfo.tableTitle}</p>
+      <p id="paragraph_height_weight_female">{chp5_table2b_rw1.tableTitle}</p>
 
       <table
         hidden={false}
@@ -51,27 +41,27 @@ const ChapterContent_V_table2b = (props) => {
         className="table_height_weight"
       >
         <tr id="table1_tr1" class="tr_height_weight">
-          <td className="td__race">{tableInfo.text1}</td>
+          <td className="td__race">{chp5_table2b_rw1.text1}</td>
 
           <td className="td_height"></td>
-          <td className="td_height">{tableInfo.text2}</td>
+          <td className="td_height">{chp5_table2b_rw1.text2}</td>
           <td className="td_height"></td>
 
           <td className="td_weight"></td>
-          <td className="td_weight">{tableInfo.text3}</td>
+          <td className="td_weight">{chp5_table2b_rw1.text3}</td>
           <td className="td_weight"></td>
 
-          <td>{tableInfo.text4}</td>
+          <td>{chp5_table2b_rw1.text4}</td>
         </tr>
         <tr className="tr_height_weight">
-          <td>{tableInfo.text8}</td>
-          <td>{tableInfo.text5}</td>
-          <td>{tableInfo.text6}</td>
-          <td>{tableInfo.text7}</td>
-          <td>{tableInfo.text5}</td>
-          <td>{tableInfo.text6}</td>
-          <td>{tableInfo.text7}</td>
-          <td>{tableInfo.text8}</td>
+          <td>{chp5_table2b_rw1.text8}</td>
+          <td>{chp5_table2b_rw1.text5}</td>
+          <td>{chp5_table2b_rw1.text6}</td>
+          <td>{chp5_table2b_rw1.text7}</td>
+          <td>{chp5_table2b_rw1.text5}</td>
+          <td>{chp5_table2b_rw1.text6}</td>
+          <td>{chp5_table2b_rw1.text7}</td>
+          <td>{chp5_table2b_rw1.text8}</td>
         </tr>
 
         {defaultView}

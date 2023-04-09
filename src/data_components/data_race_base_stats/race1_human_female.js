@@ -2,6 +2,8 @@ const race1_base_stats_human_female = {
   id: "race1f",
   race: "LUDZIE",
   sex: "k",
+  age: 15,
+
   ŻYW: 90,
   SF: 40,
   ZR: 35,

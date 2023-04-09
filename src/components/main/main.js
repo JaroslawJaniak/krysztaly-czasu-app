@@ -3,13 +3,6 @@ import Header from "./Header.js";
 import Menu from "../menu/Menu.js";
 import Sections from "./sections/Sections.js";
 
-import ChapterContent_I from "./sections/chapters/chaper_I_components/ChapterContent_I.js";
-import ChapterContent_II from "./sections/chapters/chaper_II_components/ChapterContent_II.js";
-import ChapterContent_III from "./sections/chapters/chaper_III_components/ChapterContent_III.js";
-import ChapterContent_IV from "./sections/chapters/chapter_IV_components/ChapterContent_IV.js";
-import ChapterContent_V from "./sections/chapters/chapter_V_components/ChapterContent_V.js";
-import ChapterContent_VI from "./sections/chapters/chapter_VI_components/ChapterContent_VI.js";
-
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
 import WindowInnerSize from "./WindowInnerSize";
 

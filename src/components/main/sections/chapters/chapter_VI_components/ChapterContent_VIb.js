@@ -1,5 +1,6 @@
 import chp6_table_base_stats1 from "./chp6_table-base-stats1";
 import chp6_table_base_stats2 from "./chp6_table-base-stats2";
+import chp6_table_base_stats2COPY from "./chp6_table-base-stats2 copy";
 
 const ChapterContent_VIb = () => {
   const deafaultView = (

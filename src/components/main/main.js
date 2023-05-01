@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header.js";
 import Menu from "../menu/Menu.js";
 import Sections from "./sections/Sections.js";
@@ -17,6 +17,23 @@ import "./kc_checkbox.css";
 import "./styles.css";
 
 const Main = () => {
+  const [summPlaceOfBirthState, setSummPlaceOfBirthState] = useState("");
+
+  const getInfoFromChapters = (
+    getSex,
+    getRace,
+    getPlcOfBirth,
+    getSocialClass,
+    getIncome,
+    getAbl,
+    getDis,
+    getProfName,
+    getHeight,
+    getWeight
+  ) => {
+    setSummPlaceOfBirthState(getPlcOfBirth);
+  };
+
   return (
     <body>
       <main className="main" role="main">
@@ -24,10 +41,13 @@ const Main = () => {
         <div className="main__container">
           <Header />
           <div class="main__container__sections">
-            <Sections chapters_info={main_chapters_info} />
+            <Sections chapters_info getInfoFromChapters={getInfoFromChapters} />
           </div>
         </div>
-        <CharacterSummary chapters_info={main_chapters_info} />
+        <CharacterSummary
+          chapters_info={main_chapters_info}
+          summPlaceOfBirthState={summPlaceOfBirthState}
+        />
         <WindowInnerSize />
       </main>
     </body>

@@ -6,6 +6,7 @@ const chp2_place_of_birth = [
     k100max: 16,
     placeOfBirth: "Ostrogar",
     text: " — stolica Archipelagu Centralnego i orków; ok. 153tys. mieszkańców — orki, półorki, ludzie, półolbrzymy, półelfy, elfy, gnomy, krasnoludy, hobbici;",
+    active: false,
   },
   {
     id: "table1_tr2",

@@ -1,9 +1,18 @@
 const CharacterSummarySublistItem = (props) => {
+  const deafaultView = (
+    <div>
+      <li class="menu__item character__summary__item">
+        {props.summaryText}
+        <span>{props.summaryValue}</span>
+      </li>
+    </div>
+  );
+
   return (
     <div>
       <li class="menu__item character__summary__item">
-        {props.summaryInfo}
-        <span> —</span>
+        <b>{props.summaryText}</b>
+        <span>{props.summaryValue}</span>
       </li>
     </div>
   );

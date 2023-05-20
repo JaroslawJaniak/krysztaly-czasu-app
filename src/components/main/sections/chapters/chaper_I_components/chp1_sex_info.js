@@ -1,15 +1,15 @@
 const chp1_sex_info = [
   {
     id: "male",
-    type: "radio",
-    sex: "Mężczyzna",
-    classname: "checkbox__gender",
+    type: "checkbox",
+    name: "Mężczyzna",
+    class: "checkbox__gender",
   },
   {
     id: "female",
-    type: "radio",
-    sex: "Kobieta",
-    classname: "checkbox__gender",
+    type: "checkbox",
+    name: "Kobieta",
+    class: "checkbox__gender",
   },
 ];
 

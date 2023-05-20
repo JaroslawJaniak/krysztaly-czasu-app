@@ -8,22 +8,22 @@ import ChapterContent_V from "./chapters/chapter_V_components/ChapterContent_V";
 import ChapterContent_VI from "./chapters/chapter_VI_components/ChapterContent_VI";
 
 const Sections = (props) => {
+  const [getSex, setGetSex] = useState("a");
+  const [getRace, setGetRace] = useState("b");
   const [getPlaceOfBirthState, setGetPlaceOfBirthState] = useState("");
 
   props.getInfoFromChapters(
-    "sex",
-    "race",
+    getSex,
+    getRace,
     getPlaceOfBirthState,
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "getSocialClass",
+    "getIncome",
+    "getAbl",
+    "getDis",
+    "getProfName",
+    "getHeight",
+    "getWeight"
   );
-
-  console.log(getPlaceOfBirthState);
 
   const main_chapters_info = [
     {
@@ -32,7 +32,9 @@ const Sections = (props) => {
       anchor: "#s1",
       subchaptersInfo: [],
       summaryContent: ["Płeć: ", "Rasa: "],
-      chapterContent: <ChapterContent_I />,
+      chapterContent: (
+        <ChapterContent_I onGetSex={setGetSex} onGetRace={setGetRace} />
+      ),
     },
     {
       id: "s2",

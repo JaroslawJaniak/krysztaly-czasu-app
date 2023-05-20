@@ -4,7 +4,7 @@ import ChapterContent_II_placeOfBirth from "./ChapterContent_II_placeOfBirth";
 import ChapterContent_II_socialClass from "./ChapterContent_II_socialClass";
 
 const ChapterContent_II = (props) => {
-  const [onGetPlaceOfBirthState, setonGetPlaceOfBirthState] = useState("");
+  const [onGetPlaceOfBirthState, setonGetPlaceOfBirthState] = useState("—");
 
   const getPlaceOfBirth = (item) => {
     setonGetPlaceOfBirthState(item);

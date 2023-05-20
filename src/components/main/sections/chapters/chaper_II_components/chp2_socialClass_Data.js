@@ -1,7 +1,7 @@
-const dataPlaceOfBirth = (k100buttonResult) => {
-  let placeOfBirth = {
-    srcImage: "",
-    plcBirth: "",
+const dataSocialClass = (k100buttonResult) => {
+  let socialClass = {
+    sclClassName: "WKW;",
+    sclClassBenefice: 0,
     table_trId: "",
   };
 
@@ -71,7 +71,7 @@ const dataPlaceOfBirth = (k100buttonResult) => {
     placeOfBirth.table_trId = 16;
   }
 
-  return placeOfBirth;
+  return socialClass;
 };
 
-export default dataPlaceOfBirth;
+export default dataSocialClass;

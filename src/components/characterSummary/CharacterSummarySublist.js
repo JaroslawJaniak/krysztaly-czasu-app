@@ -5,7 +5,8 @@ const CharacterSummarySublist = (props) => {
     <ul class="unordered-list">
       {props.summaryInfo.map((summaryContent) => (
         <CharacterSummarySublistItem
-          summaryInfo={summaryContent}
+          summaryText={summaryContent.text}
+          summaryValue={summaryContent.value}
         ></CharacterSummarySublistItem>
       ))}
     </ul>

@@ -1,4 +1,4 @@
-import K100buttonComponent from "../../../../../data/k100/K100buttonComponent";
+import K100buttonComponent from "../../../../../data/k100/DiceButtonComponent";
 
 const ChapterContent_V_k100 = () => {
   const k100WeightRollResult = (k) => {

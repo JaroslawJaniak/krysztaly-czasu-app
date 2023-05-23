@@ -78,6 +78,41 @@
   transition: all 500ms ease-out;
 }
 
+.menu__overlay button {
+  font-size: 0.6rem;
+  text-decoration: none;
+  display: block;
+  padding: 0.125rem 0;
+  color: #ccc;
+  transition: all 500ms ease-out;
+  border-width: 0;
+}
+
+.menu .overlay-content button:hover,
+.menu .overlay-content button:focus {
+  padding-left: 0.45rem;
+  color: red;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+
+  transition: 500ms;
+}
+
+.menu .overlay-content button:focus {
+  padding-left: 0.45rem;
+  color: rgb(74, 126, 77);
+  background: linear-gradient(
+    to right,
+    rgba(15, 80, 2, 0.1) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+
+  transition: 500ms;
+}
+
 .menu li.active > a {
   color: #333;
   font-weight: 500;

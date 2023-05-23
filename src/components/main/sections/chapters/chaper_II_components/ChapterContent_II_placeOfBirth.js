@@ -4,7 +4,7 @@ import mapImage from "../../../../../images/map0.jpg";
 import chp2_info1 from "./chp2_info1";
 import chp2_place_of_birth from "./chp2_table-place-of-birth";
 
-import K100buttonComponent from "../../../../../data/k100/K100buttonComponent";
+import DiceButtonComponent from "../../../../../data/k100/DiceButtonComponent";
 
 import dataPlaceOfBirth from "./chp2_placeOfBirth_Data";
 
@@ -15,14 +15,14 @@ const ChapterContent_II_placeOfBirth = (props) => {
 
   const k100RollResult = (k) => {
     if (k !== 0) {
-      console.log("result: " + k);
-      console.log("result: " + dataPlaceOfBirth(k).plcBirth);
+      //console.log("result: " + k);
+      //console.log("result: " + dataPlaceOfBirth(k).plcBirth);
       setPlaceOfBirthState(dataPlaceOfBirth(k).plcBirth);
       setSrcImageState(dataPlaceOfBirth(k).srcImage);
       setTable_trIdState(dataPlaceOfBirth(k).table_trId);
       props.onGetPlaceOfBirth(placeOfBirthState);
 
-      console.log(document.getElementById("k100button1"));
+      //console.log(document.getElementById("k100button1"));
       document
         .getElementById("table1_tr" + table_trIdState)
         .classList.add("activeTrTable");
@@ -162,11 +162,7 @@ const ChapterContent_II_placeOfBirth = (props) => {
           </tr>
         ))}
       </table>
-      <K100buttonComponent
-        id="k100button1"
-        imgSrc
-        onk100Roll={k100RollResult}
-      />
+      <DiceButtonComponent id="k100button1" onDiceRoll={k100RollResult} />
 
       <div>
         <div>

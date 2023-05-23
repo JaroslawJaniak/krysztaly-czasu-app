@@ -1,5 +1,5 @@
 import chp3_info from "./chp3_info";
-import K100buttonComponent from "../../../../../data/k100/K100buttonComponent";
+import K100buttonComponent from "../../../../../data/k100/DiceButtonComponent";
 
 const ChapterContent_III = () => {
   return (

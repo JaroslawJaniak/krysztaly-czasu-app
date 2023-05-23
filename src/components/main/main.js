@@ -11,16 +11,17 @@ import ChapterContent_V from "./sections/chapters/chapter_V_components/ChapterCo
 import ChapterContent_VI from "./sections/chapters/chapter_VI_components/ChapterContent_VI.js";
 
 import CharacterSummary from "../characterSummary/CharacterSummary.js";
-import WindowInnerSize from "./WindowInnerSize";
+import WindowInnerSize from "./WindowInnerSize.js";
 
-import "./Main.css";
+import "./main.css";
 import "./kc_styles.css";
 import "./kc_professions.css";
 import "./kc_checkbox.css";
 import "./styles.css";
 
 const Main = () => {
-  const [summPlaceOfBirthState, setSummPlaceOfBirthState] = useState("—");
+  const [summPlaceOfBirthState, setSummPlaceOfBirthState] = useState("—1");
+  const [stateChapterViewId, setStateChapterViewId] = useState("s1");
 
   const getInfoFromChapters = (
     getSex,
@@ -36,6 +37,20 @@ const Main = () => {
   ) => {
     setSummPlaceOfBirthState(getPlcOfBirth);
   };
+
+  let tempID;
+  let defaultView = <div>coś takiego</div>;
+
+  const getChapterViewId = (id) => {
+    setStateChapterViewId(id);
+    tempID = id;
+    console.log("4getViewID: " + id);
+    console.log("4getViewID st: " + stateChapterViewId);
+  };
+
+  if (stateChapterViewId === "s5") {
+    defaultView = <div>bla bla v bla</div>;
+  }
 
   const main_chapters_info = [
     {
@@ -145,7 +160,7 @@ const Main = () => {
         { text: "CH: ", value: "—" },
         { text: "PR: ", value: "—" },
         { text: "WI: ", value: "—" },
-        { text: "ZW: ", value: "ghgfshsfhfs" },
+        { text: "ZW: ", value: "—" },
         { text: "O/W: ", value: "—" },
       ],
       chapterContent: <ChapterContent_VI />,
@@ -155,11 +170,19 @@ const Main = () => {
   return (
     <body>
       <main className="main" role="main">
-        <Menu chapters_info={main_chapters_info} />
+        <Menu
+          chapters_info={main_chapters_info}
+          onChapterViewId={getChapterViewId}
+        />
         <div className="main__container">
           <Header />
+          {defaultView}
           <div class="main__container__sections">
-            <Sections chapters_info getInfoFromChapters={getInfoFromChapters} />
+            <Sections
+              chapters_info
+              getInfoFromChapters={getInfoFromChapters}
+              chapterViewId={stateChapterViewId}
+            />
           </div>
         </div>
         <CharacterSummary

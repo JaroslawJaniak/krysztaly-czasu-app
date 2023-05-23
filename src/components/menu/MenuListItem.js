@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const MenuListItem = (props) => {
+  const [stateChapterViewId, setStateChapterViewId] = useState("s1");
+
+  const clickHandler = () => {
+    setStateChapterViewId(props.chapterId);
+    props.onChapterViewId(props.chapterId);
+  };
+
   return (
     <li role="menuitem" className="menu__item">
-      <a id={props.chapterId} href={props.chapterHref} className="menu__link">
+      <button
+        id={props.chapterId}
+        className="menu__link"
+        onClick={clickHandler}
+      >
         {props.chapterTitle}
-        {props.chapterTitle_test}
-      </a>
+      </button>
       {props.children}
     </li>
   );

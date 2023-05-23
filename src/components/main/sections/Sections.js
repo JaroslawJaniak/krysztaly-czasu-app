@@ -10,7 +10,7 @@ import ChapterContent_VI from "./chapters/chapter_VI_components/ChapterContent_V
 const Sections = (props) => {
   const [getSex, setGetSex] = useState("a");
   const [getRace, setGetRace] = useState("b");
-  const [getPlaceOfBirthState, setGetPlaceOfBirthState] = useState("");
+  const [getPlaceOfBirthState, setGetPlaceOfBirthState] = useState("—2");
 
   props.getInfoFromChapters(
     getSex,
@@ -56,7 +56,10 @@ const Sections = (props) => {
         "Roczny dochód (złt): ",
       ],
       chapterContent: (
-        <ChapterContent_II onGetPlaceOfBirth={setGetPlaceOfBirthState} />
+        <ChapterContent_II
+          defaultPlcOfBirth={getPlaceOfBirthState}
+          onGetPlaceOfBirth={setGetPlaceOfBirthState}
+        />
       ),
     },
     {
@@ -132,16 +135,66 @@ const Sections = (props) => {
     },
   ];
 
-  return (
-    <div>
-      {main_chapters_info.map((chapter) => (
+  let chapterDeafaultView = <div>chapterDeafaultView</div>;
+
+  if (props.chapterViewId === "s1") {
+    chapterDeafaultView = (
+      <section id={main_chapters_info[0].id} className="">
+        <br />
+        <h3 className="stylized">{main_chapters_info[0].title}</h3>
+        <div className="content">{main_chapters_info[0].chapterContent}</div>
+      </section>
+    );
+  } else if (props.chapterViewId === "s2") {
+    chapterDeafaultView = (
+      <section id={main_chapters_info[1].id} className="">
+        <br />
+        <h3 className="stylized">{main_chapters_info[1].title}</h3>
+        <div className="content">{main_chapters_info[1].chapterContent}</div>
+      </section>
+    );
+  } else if (props.chapterViewId === "s3") {
+    chapterDeafaultView = (
+      <section id={main_chapters_info[2].id} className="">
+        <br />
+        <h3 className="stylized">{main_chapters_info[2].title}</h3>
+        <div className="content">{main_chapters_info[2].chapterContent}</div>
+      </section>
+    );
+  } else if (props.chapterViewId === "s4") {
+    chapterDeafaultView = (
+      <section id={main_chapters_info[3].id} className="">
+        <br />
+        <h3 className="stylized">{main_chapters_info[3].title}</h3>
+        <div className="content">{main_chapters_info[3].chapterContent}</div>
+      </section>
+    );
+  } else if (props.chapterViewId === "s5") {
+    chapterDeafaultView = (
+      <section id={main_chapters_info[4].id} className="">
+        <br />
+        <h3 className="stylized">{main_chapters_info[4].title}</h3>
+        <div className="content">{main_chapters_info[4].chapterContent}</div>
+      </section>
+    );
+  } else if (props.chapterViewId === "s6") {
+    chapterDeafaultView = (
+      <section id={main_chapters_info[5].id} className="">
+        <br />
+        <h3 className="stylized">{main_chapters_info[5].title}</h3>
+        <div className="content">{main_chapters_info[5].chapterContent}</div>
+      </section>
+    );
+  }
+
+  return <div>{chapterDeafaultView}</div>;
+};
+export default Sections;
+
+/*{main_chapters_info.map((chapter) => (
         <section key={chapter.id} id={chapter.id} className="">
           <br />
           <h3 className="stylized">{chapter.title}</h3>
           <div className="content">{chapter.chapterContent}</div>
         </section>
-      ))}
-    </div>
-  );
-};
-export default Sections;
+      ))} */

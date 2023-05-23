@@ -11,6 +11,7 @@ const MenuUnorderedList = (props) => {
             chapterId={chapters.id}
             chapterTitle={chapters.title}
             chapterHref={chapters.anchor}
+            onChapterViewId={props.onChapterViewId}
           >
             <MenuUnorderedSublist subchaptersInfo={chapters.subchaptersInfo} />
           </MenuListItem>

@@ -5,6 +5,7 @@ const MenuOrderedList = (props) => {
     <ol className="menu__ordered-list">
       <MenuUnorderedList
         chapters_info={props.chapters_info}
+        onChapterViewId={props.onChapterViewId}
       ></MenuUnorderedList>
     </ol>
   );

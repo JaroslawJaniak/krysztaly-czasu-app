@@ -1,17 +1,31 @@
 {
   "files": {
-    "main.css": "/krysztaly-czasu-app/static/css/main.f39011a0.css",
-    "main.js": "/krysztaly-czasu-app/static/js/main.d81bb9cf.js",
+    "main.css": "/krysztaly-czasu-app/static/css/main.1c4e5473.css",
+    "main.js": "/krysztaly-czasu-app/static/js/main.55eb5d3c.js",
     "static/js/787.07af059a.chunk.js": "/krysztaly-czasu-app/static/js/787.07af059a.chunk.js",
+    "static/media/map13.jpg": "/krysztaly-czasu-app/static/media/map13.f9df978d6f1cf76e9862.jpg",
+    "static/media/map12.jpg": "/krysztaly-czasu-app/static/media/map12.46d6b5ba578c942708b0.jpg",
+    "static/media/map7.jpg": "/krysztaly-czasu-app/static/media/map7.689e327b2367b7127d04.jpg",
+    "static/media/map14.jpg": "/krysztaly-czasu-app/static/media/map14.464acb65e4f7f0c15f91.jpg",
+    "static/media/map2.jpg": "/krysztaly-czasu-app/static/media/map2.c4a5d174418d4c9f43c4.jpg",
+    "static/media/map3.jpg": "/krysztaly-czasu-app/static/media/map3.e08002aada2ec0e47380.jpg",
+    "static/media/map10.jpg": "/krysztaly-czasu-app/static/media/map10.2f3f762528495128fc2a.jpg",
+    "static/media/map1.jpg": "/krysztaly-czasu-app/static/media/map1.d2ee7dfbbbef86f9007f.jpg",
+    "static/media/map9.jpg": "/krysztaly-czasu-app/static/media/map9.7f57d2aa06e754a9a4ab.jpg",
+    "static/media/map8.jpg": "/krysztaly-czasu-app/static/media/map8.4fc4bc6db5a82ed228a5.jpg",
+    "static/media/map6.jpg": "/krysztaly-czasu-app/static/media/map6.1abf3f34711f0485b6a7.jpg",
+    "static/media/map11.jpg": "/krysztaly-czasu-app/static/media/map11.249547a99701ca8736e8.jpg",
+    "static/media/map5.jpg": "/krysztaly-czasu-app/static/media/map5.29d8a217fad8f76f3642.jpg",
+    "static/media/map4.jpg": "/krysztaly-czasu-app/static/media/map4.cab77d84d1c9ce0592dd.jpg",
     "static/media/map0.jpg": "/krysztaly-czasu-app/static/media/map0.ad0c4fcc9e489ffe2d9a.jpg",
     "static/media/kc_logo.JPG": "/krysztaly-czasu-app/static/media/kc_logo.ac457116605c7e32691e.JPG",
     "index.html": "/krysztaly-czasu-app/index.html",
-    "main.f39011a0.css.map": "/krysztaly-czasu-app/static/css/main.f39011a0.css.map",
-    "main.d81bb9cf.js.map": "/krysztaly-czasu-app/static/js/main.d81bb9cf.js.map",
+    "main.1c4e5473.css.map": "/krysztaly-czasu-app/static/css/main.1c4e5473.css.map",
+    "main.55eb5d3c.js.map": "/krysztaly-czasu-app/static/js/main.55eb5d3c.js.map",
     "787.07af059a.chunk.js.map": "/krysztaly-czasu-app/static/js/787.07af059a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f39011a0.css",
-    "static/js/main.d81bb9cf.js"
+    "static/css/main.1c4e5473.css",
+    "static/js/main.55eb5d3c.js"
   ]
 }

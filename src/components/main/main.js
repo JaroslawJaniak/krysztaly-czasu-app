@@ -21,12 +21,14 @@ import "./styles.css";
 
 const Main = () => {
   const [summPlaceOfBirthState, setSummPlaceOfBirthState] = useState("—1");
+  const [summPlaceOfBirthImgSrc, setSummPlaceOfBirthImgSrc] = useState("—1");
   const [stateChapterViewId, setStateChapterViewId] = useState("s1");
 
   const getInfoFromChapters = (
     getSex,
     getRace,
     getPlcOfBirth,
+    getImgSrc,
     getSocialClass,
     getIncome,
     getAbl,
@@ -36,6 +38,7 @@ const Main = () => {
     getWeight
   ) => {
     setSummPlaceOfBirthState(getPlcOfBirth);
+    setSummPlaceOfBirthImgSrc(getImgSrc);
   };
 
   let tempID;
@@ -188,6 +191,7 @@ const Main = () => {
         <CharacterSummary
           chapters_info={main_chapters_info}
           summPlaceOfBirthState={summPlaceOfBirthState}
+          imgSrc={summPlaceOfBirthImgSrc}
         />
         <WindowInnerSize />
       </main>

@@ -7,15 +7,25 @@ import ChapterContent_IV from "./chapters/chapter_IV_components/ChapterContent_I
 import ChapterContent_V from "./chapters/chapter_V_components/ChapterContent_V";
 import ChapterContent_VI from "./chapters/chapter_VI_components/ChapterContent_VI";
 
+import imageMap0 from "../../../images/map0.jpg";
+
 const Sections = (props) => {
   const [getSex, setGetSex] = useState("a");
   const [getRace, setGetRace] = useState("b");
-  const [getPlaceOfBirthState, setGetPlaceOfBirthState] = useState("—2");
+  const [getPlaceOfBirthState, setGetPlaceOfBirthState] = useState("default");
+  const [getPlaceOfBirthStateImgSrc, setGetPlaceOfBirthStateImgSrc] =
+    useState(imageMap0);
+  const [getPlaceOfBirthStatek100Result, setGetPlaceOfBirthStatek100Result] =
+    useState(99);
+
+  console.log("-> " + getPlaceOfBirthStateImgSrc);
+  console.log("-> " + getPlaceOfBirthStatek100Result);
 
   props.getInfoFromChapters(
     getSex,
     getRace,
     getPlaceOfBirthState,
+    getPlaceOfBirthStateImgSrc,
     "getSocialClass",
     "getIncome",
     "getAbl",
@@ -58,7 +68,11 @@ const Sections = (props) => {
       chapterContent: (
         <ChapterContent_II
           defaultPlcOfBirth={getPlaceOfBirthState}
+          defaultPlcOfBirthImgSrc={getPlaceOfBirthStateImgSrc}
+          defaultPlcOfBirthK100Result={getPlaceOfBirthStatek100Result}
           onGetPlaceOfBirth={setGetPlaceOfBirthState}
+          onGetPlaceOfBirthImgSrc={setGetPlaceOfBirthStateImgSrc}
+          onGetPlaceOfBirthK100Result={setGetPlaceOfBirthStatek100Result}
         />
       ),
     },

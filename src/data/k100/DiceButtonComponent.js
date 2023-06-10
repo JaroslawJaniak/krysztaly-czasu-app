@@ -2,28 +2,32 @@ import React, { useState } from "react";
 import kDice from "./kDice";
 
 const DiceButtonComponent = (props) => {
-  const [DiceButtonRoll, setDiceButtonRoll] = useState(0);
+  const [DiceButtonRollResult, setDiceButtonRollResult] = useState(0);
   const [clicked, setClicked] = useState(false);
+
+  console.log("fff-> " + props.defaultDiceResult);
+  //setDiceButtonRollResult(props.defaultk100Result);
 
   const DiceClickHandler = () => {
     if (clicked === false) {
-      setDiceButtonRoll(kDice(1, 100));
+      setDiceButtonRollResult(kDice(props.n, props.k));
       setClicked(true);
     }
   };
 
-  props.onDiceRoll(DiceButtonRoll);
+  props.onDiceRoll(DiceButtonRollResult);
 
   let defaultView = (
     <div>
       <button id={props.id} className="Dice_button" onClick={DiceClickHandler}>
         {" "}
-        {"Dice"}{" "}
+        {"Dice@: "}
+        {props.defaultDiceResult}
       </button>
     </div>
   );
 
-  if (DiceButtonRoll !== 0) {
+  if (DiceButtonRollResult !== 0) {
     defaultView = (
       <div>
         <button
@@ -32,7 +36,7 @@ const DiceButtonComponent = (props) => {
           onClick={DiceClickHandler}
         >
           {" "}
-          {DiceButtonRoll}{" "}
+          {DiceButtonRollResult}{" "}
         </button>
       </div>
     );

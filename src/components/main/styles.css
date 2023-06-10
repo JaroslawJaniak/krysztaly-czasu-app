@@ -177,12 +177,6 @@ h4 .collapsible-sections--item__button {
   border-bottom: 1px solid #efefef;
 }
 
-h4 .collapsible-sections--item__button:focus svg {
-  /*
-	outline: 2px solid;
-	*/
-}
-
 .collapsible-sections--item__button svg {
   height: 1em;
   margin-left: 0.5em;
@@ -341,7 +335,7 @@ h3.stylized {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   padding: 8px;
-  max-width: 128em;
+  max-width: 187em;
   margin: 0 auto;
   border: 1px solid #efefef;
   background-color: #fff;
@@ -362,6 +356,7 @@ h3.stylized {
   .main {
     display: block;
     width: 100%;
+    max-width: 187em;
   }
 
   .main > * {
@@ -378,7 +373,7 @@ h3.stylized {
     top: 0.5rem;
     padding-left: 0;
     width: 100%;
-    height: 500px;
+    height: 400px;
     z-index: 1;
   }
 

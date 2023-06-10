@@ -9,20 +9,31 @@ import DiceButtonComponent from "../../../../../data/k100/DiceButtonComponent";
 import dataPlaceOfBirth from "./chp2_placeOfBirth_Data";
 
 const ChapterContent_II_placeOfBirth = (props) => {
-  const [placeOfBirthState, setPlaceOfBirthState] = useState("");
-  const [srcImageState, setSrcImageState] = useState("");
+  const [placeOfBirthState, setPlaceOfBirthState] = useState(
+    props.defaultPlcOfBirth
+  );
+  const [srcImageState, setSrcImageState] = useState(
+    props.defaultPlcOfBirthImgSrc
+  );
+  const [k100ResultState, setk100ResultState] = useState(
+    props.defaultPlcOfBirthK100Result
+  );
   const [table_trIdState, setTable_trIdState] = useState("");
+
+  console.log("sdsdsad: " + k100ResultState);
 
   const k100RollResult = (k) => {
     if (k !== 0) {
-      //console.log("result: " + k);
-      //console.log("result: " + dataPlaceOfBirth(k).plcBirth);
       setPlaceOfBirthState(dataPlaceOfBirth(k).plcBirth);
       setSrcImageState(dataPlaceOfBirth(k).srcImage);
       setTable_trIdState(dataPlaceOfBirth(k).table_trId);
-      props.onGetPlaceOfBirth(placeOfBirthState);
+      setk100ResultState(k);
+      props.onGetPlaceOfBirth(
+        placeOfBirthState,
+        srcImageState,
+        k100ResultState
+      );
 
-      //console.log(document.getElementById("k100button1"));
       document
         .getElementById("table1_tr" + table_trIdState)
         .classList.add("activeTrTable");
@@ -162,14 +173,20 @@ const ChapterContent_II_placeOfBirth = (props) => {
           </tr>
         ))}
       </table>
-      <DiceButtonComponent id="k100button1" onDiceRoll={k100RollResult} />
+      <DiceButtonComponent
+        id="k100button1"
+        n={1}
+        k={100}
+        defaultDiceResult={k100ResultState}
+        onDiceRoll={k100RollResult}
+      />
 
       <div>
         <div>
           miejsce urodzenia:
           <span id="place_of_birth"> {placeOfBirthState}</span>
         </div>
-        <img id="map" src={mapImage} alt="map" className="mapImage" />
+        <img id="map" src={srcImageState} alt="map" className="mapImage" />
       </div>
     </section>
   );

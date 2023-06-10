@@ -3,13 +3,32 @@
 }
 
 .mapImage {
-  width: 80%;
-  height: 78%;
+  width: 50%;
+  height: 48%;
+}
+
+.mapImageSummary {
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mapImageSummary:hover {
+  transition: all 0.25s;
+  transition-timing-function: ease;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .kc_logo {
   display: block;
   margin: auto;
+}
+
+.Dice_button {
+  width: 80px;
+  font-weight: bold;
 }
 
 table.table_origin {

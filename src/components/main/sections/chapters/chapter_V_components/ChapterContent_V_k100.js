@@ -1,23 +1,25 @@
-import K100buttonComponent from "../../../../../data/k100/DiceButtonComponent";
+import DiceButtonComponent from "../../../../../data/k100/DiceButtonComponent";
 
 const ChapterContent_V_k100 = () => {
   const k100WeightRollResult = (k) => {
     if (k !== 0) {
-      console.log("result2: " + k);
+      console.log("weight result2: " + k);
     }
   };
   const k100HeightRollResult = (k) => {
     if (k !== 0) {
-      console.log("result2: " + k);
+      console.log("height result2: " + k);
     }
   };
 
   return (
     <div>
-      <K100buttonComponent
+      <DiceButtonComponent
         id="k100button2"
-        imgSrc
-        onk100Roll={k100WeightRollResult}
+        n={1}
+        k={100}
+        defaultk100Result={0}
+        onDiceRoll={k100WeightRollResult}
       />
       <span id="result4"></span>
       <div id="tmpl3"></div>
@@ -25,11 +27,14 @@ const ChapterContent_V_k100 = () => {
         wzrost:
         <span id="height_character"></span>
       </div>
-      <K100buttonComponent
-        id="k100button3"
-        imgSrc
-        onk100Roll={k100HeightRollResult}
+      <DiceButtonComponent
+        id="k100button2"
+        n={1}
+        k={100}
+        defaultk100Result={0}
+        onDiceRoll={k100HeightRollResult}
       />
+
       <span id="result5"></span>
       <div id="tmpl4"></div>
       <div>

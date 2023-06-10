@@ -23,6 +23,14 @@ const CharacterSummary = (props) => {
             ))}
           </ul>
         </li>
+        <li>
+          <img
+            id="map2"
+            src={props.imgSrc}
+            alt="map"
+            className="mapImageSummary"
+          />
+        </li>
       </ol>
     </div>
   );

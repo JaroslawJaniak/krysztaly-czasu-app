@@ -333,9 +333,9 @@ h3.stylized {
 
 .main {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: 25% 50% 25%;
   padding: 8px;
-  max-width: 128em;
+  max-width: 187em;
   margin: 0 auto;
   border: 1px solid #efefef;
   background-color: #fff;

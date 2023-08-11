@@ -17,7 +17,7 @@ const ChapterContent_II_socialClass = () => {
   const [table_trIdState, setTable_trIdState] = useState("");
   const [dice_n, setDice_n] = useState("0");
   const [dice_k, setDice_k] = useState("0");
-  const [bonusStat, setBonusStat] = useState("");
+  const [bonusStat, setSocialClassBonusStat] = useState("");
   const [beneficeValue, setBeneficeValue] = useState("");
 
   console.log("sdsdsad: " + k100ResultState);
@@ -29,7 +29,7 @@ const ChapterContent_II_socialClass = () => {
       setk100ResultState(k);
       setDice_n(dataSocialClass(k).n);
       setDice_k(dataSocialClass(k).k);
-      setBonusStat(dataSocialClass(k).bonusStat);
+      setSocialClassBonusStat(dataSocialClass(k).bonusStat);
       setk100ResultState2(dice_n + "k" + dice_k);
 
       document

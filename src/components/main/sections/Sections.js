@@ -16,10 +16,12 @@ const Sections = (props) => {
   const [getPlaceOfBirthStateImgSrc, setGetPlaceOfBirthStateImgSrc] =
     useState(imageMap0);
   const [getPlaceOfBirthStatek100Result, setGetPlaceOfBirthStatek100Result] =
-    useState(99);
+    useState(999);
+  const [getPlaceOfBirthStateTrId, setGetPlaceOfBirthStateTrId] = useState(4);
 
   console.log("-> " + getPlaceOfBirthStateImgSrc);
   console.log("-> " + getPlaceOfBirthStatek100Result);
+  console.log("-> " + getPlaceOfBirthStateTrId);
 
   props.getInfoFromChapters(
     getSex,
@@ -70,9 +72,11 @@ const Sections = (props) => {
           defaultPlcOfBirth={getPlaceOfBirthState}
           defaultPlcOfBirthImgSrc={getPlaceOfBirthStateImgSrc}
           defaultPlcOfBirthK100Result={getPlaceOfBirthStatek100Result}
+          defaultPlcOfBirthTrId={getPlaceOfBirthStateTrId}
           onGetPlaceOfBirth={setGetPlaceOfBirthState}
           onGetPlaceOfBirthImgSrc={setGetPlaceOfBirthStateImgSrc}
           onGetPlaceOfBirthK100Result={setGetPlaceOfBirthStatek100Result}
+          onGetPlaceOfBirthTrId={setGetPlaceOfBirthStateTrId}
         />
       ),
     },

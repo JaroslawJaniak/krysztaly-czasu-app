@@ -12,15 +12,21 @@ const ChapterContent_II = (props) => {
     props.defaultPlcOfBirthK100Result
   );
 
+  const [onGetTable_trId, setonGetTable_trIdState] = useState(
+    props.defaultPlcOfBirthTrId
+  );
+
   const getPlaceOfBirth = (placeOfBirth, imgSrc, k100Result, trId) => {
     setonGetPlaceOfBirthState(placeOfBirth);
     setonGetImgSrc(imgSrc);
     setonGetk100Result(k100Result);
+    setonGetTable_trIdState(trId);
   };
 
   props.onGetPlaceOfBirth(onGetPlaceOfBirthState);
   props.onGetPlaceOfBirthImgSrc(onGetImgSrc);
   props.onGetPlaceOfBirthK100Result(onGetk100Result);
+  props.onGetPlaceOfBirthTrId(onGetTable_trId);
 
   return (
     <div>
@@ -28,6 +34,7 @@ const ChapterContent_II = (props) => {
         defaultPlcOfBirth={props.defaultPlcOfBirth}
         defaultPlcOfBirthImgSrc={props.defaultPlcOfBirthImgSrc}
         defaultPlcOfBirthK100Result={props.defaultPlcOfBirthK100Result}
+        defaultPlcOfBirthTrId={props.defaultPlcOfBirthTrId}
         onGetPlaceOfBirth={getPlaceOfBirth}
       />
       <ChapterContent_II_socialClass />

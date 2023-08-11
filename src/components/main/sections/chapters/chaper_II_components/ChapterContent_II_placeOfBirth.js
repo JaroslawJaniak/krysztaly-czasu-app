@@ -18,9 +18,14 @@ const ChapterContent_II_placeOfBirth = (props) => {
   const [k100ResultState, setk100ResultState] = useState(
     props.defaultPlcOfBirthK100Result
   );
-  const [table_trIdState, setTable_trIdState] = useState("");
+  const [table_trIdState, setTable_trIdState] = useState(
+    props.defaultPlcOfBirthTrId
+  );
 
-  console.log("sdsdsad: " + k100ResultState);
+  console.log("0sdsdsad: " + table_trIdState);
+
+  console.log("1sdsdsad: " + k100ResultState);
+  console.log("2sdsdsad: " + table_trIdState);
 
   const k100RollResult = (k) => {
     if (k !== 0) {
@@ -31,7 +36,8 @@ const ChapterContent_II_placeOfBirth = (props) => {
       props.onGetPlaceOfBirth(
         placeOfBirthState,
         srcImageState,
-        k100ResultState
+        k100ResultState,
+        table_trIdState
       );
 
       document
@@ -164,7 +170,7 @@ const ChapterContent_II_placeOfBirth = (props) => {
       <p>{chp2_info1.tableLabel}</p>
       <table id="table1_origin_place_of_birth" className="table_origin">
         {chp2_place_of_birth.map((chp2_place_of_birth) => (
-          <tr id={chp2_place_of_birth.id}>
+          <tr id={chp2_place_of_birth.id} className={"td__k100"}>
             <td className="td__k100">{chp2_place_of_birth.k100}</td>
             <td>
               <b>{chp2_place_of_birth.placeOfBirth}</b>

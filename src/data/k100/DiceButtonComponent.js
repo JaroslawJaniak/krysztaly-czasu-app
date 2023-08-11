@@ -5,9 +5,6 @@ const DiceButtonComponent = (props) => {
   const [DiceButtonRollResult, setDiceButtonRollResult] = useState(0);
   const [clicked, setClicked] = useState(false);
 
-  console.log("fff-> " + props.defaultDiceResult);
-  //setDiceButtonRollResult(props.defaultk100Result);
-
   const DiceClickHandler = () => {
     if (clicked === false) {
       setDiceButtonRollResult(kDice(props.n, props.k));
